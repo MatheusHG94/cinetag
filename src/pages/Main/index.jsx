@@ -4,6 +4,7 @@ import Banner from 'components/Banner';
 import Title from 'components/Title';
 import Card from 'components/Card';
 import movieList from 'json/db.json';
+import { useFavoritesContext } from 'context/Favorites';
 
 export default function Main() {
   return (
@@ -19,6 +20,7 @@ export default function Main() {
           <Card 
             key={movie.id}
             {...movie} // passando os atributos de movie com o spread operator, o componente Card já identifica automaticamente como props, desde que o nome do atributo seja igual ao da prop esperada
+            movie={movie}
           />
         )}
       </section>

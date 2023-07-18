@@ -19,4 +19,5 @@
 .like {
     width: 25px;
     padding: 0 1rem;
+    cursor: pointer;
 }
