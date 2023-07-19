@@ -24,6 +24,7 @@ export default function Favorites() {
           <Card 
             key={movie.id}
             {...movie}
+            movie={movie}
           />  
         )}
       </section>

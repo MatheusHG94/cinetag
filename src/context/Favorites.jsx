@@ -28,13 +28,15 @@ export const useFavoritesContext = () => {
     const setFavoriteMovie = (newFavorite) => {
         const repeatedFavorite = favorites.some(movie => movie.id === newFavorite.id);
 
-        const newList = [...favorites];
+        let newList = [...favorites];
 
         if (!repeatedFavorite) {
             newList.push(newFavorite);
             return setFavorites(newList);
         }
-        newList.splice(newList.indexOf(newFavorite), 1);
+        // newList.splice(newList.indexOf(newFavorite), 1);
+        // newList.splice(newList.findIndex(movie => movie.id === newFavorite.id), 1);
+        newList = favorites.filter(movie => movie.id !== newFavorite.id);
         return setFavorites(newList);
     }
 

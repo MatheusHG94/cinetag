@@ -4,7 +4,6 @@ import Banner from 'components/Banner';
 import Title from 'components/Title';
 import Card from 'components/Card';
 import movieList from 'json/db.json';
-import { useFavoritesContext } from 'context/Favorites';
 
 export default function Main() {
   return (
