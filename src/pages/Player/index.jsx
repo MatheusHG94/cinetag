@@ -10,10 +10,14 @@ export default function Player() {
     const params = useParams();
     const [movie, setMovie] = useState();
 
+    /* 
+        fazendo a requisição por um elemento específico através da URL
+            ".../movies?id=${params.id}"
+    */
     useEffect(() => {
         fetch(`https://my-json-server.typicode.com/MatheusHG94/cinetag-api/movies?id=${params.id}`)
-        .then(data => data.json())
-        .then(data => setMovie(...data))
+            .then(data => data.json())
+            .then(data => setMovie(...data))
     }, [params.id]);
 
     if (!movie) {
@@ -29,14 +33,14 @@ export default function Player() {
                 <h1>Player</h1>
             </Title>
             <section className={styles.container}>
-                <iframe 
-                width="100%" 
-                height="100%" 
-                src={movie.link} 
-                title={movie.title}
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowfullscreen></iframe>
+                <iframe
+                    width="100%"
+                    height="100%"
+                    src={movie.link}
+                    title={movie.title}
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
             </section>
         </>
     )
