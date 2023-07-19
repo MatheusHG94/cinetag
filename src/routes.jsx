@@ -4,6 +4,8 @@ import Main from 'pages/Main';
 import Favorites from 'pages/Favorites';
 import FramePage from 'components/FramePage';
 import { FavoritesProvider } from 'context/Favorites';
+import Player from 'pages/Player';
+import NotFound from 'pages/NotFound';
 
 export default function AppRoutes() {
     return (
@@ -13,6 +15,8 @@ export default function AppRoutes() {
                     <Route path='/' element={<FramePage />}>
                         <Route path='/' element={<Main />} />
                         <Route path='/favorites' element={<Favorites />} />
+                        <Route path='/:id' element={<Player />} />
+                        <Route path='*' element={<NotFound />} />
                     </Route>
                 </Routes>
             </FavoritesProvider>

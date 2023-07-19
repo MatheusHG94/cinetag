@@ -21,3 +21,9 @@
     padding: 0 1rem;
     cursor: pointer;
 }
+
+h2 {
+    text-decoration: none;
+    color: var(--black);
+    text-align: left;
+}

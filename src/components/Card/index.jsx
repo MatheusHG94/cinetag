@@ -3,6 +3,7 @@ import styles from './Card.module.css';
 import likeIcon from './like.png';
 import dislikeIcon from './dislike.png';
 import { useFavoritesContext } from 'context/Favorites';
+import { Link } from 'react-router-dom';
 
 export default function Card({
     id,
@@ -22,11 +23,13 @@ export default function Card({
 
     return (
         <div className={styles.card}>
-            <img
-                src={banner}
-                alt={title}
-                className={styles.banner}
-            />
+            <Link className={styles.link} to={`/${id}`} >
+                <img
+                    src={banner}
+                    alt={title}
+                    className={styles.banner}
+                />
+            </Link>
             <h2>
                 {title}
             </h2>
