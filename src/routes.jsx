@@ -13,7 +13,7 @@ export default function AppRoutes() {
                 <Route path='/' element={<FramePage />}>
                     <Route index element={<Main />} />
                     <Route path='favorites' element={<Favorites />} />
-                    <Route path=':id' element={<Player />} />
+                    <Route path='video/:id' element={<Player />} />
                     <Route path='*' element={<NotFound />} />
                 </Route>
             </Routes>

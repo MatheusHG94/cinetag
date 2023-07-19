@@ -23,7 +23,7 @@ export default function Card({
 
     return (
         <div className={styles.card}>
-            <Link className={styles.link} to={`/${id}`} >
+            <Link className={styles.link} to={`/video/${id}`} >
                 <img
                     src={banner}
                     alt={title}
